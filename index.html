@@ -20,7 +20,10 @@ h1{font-size:26px;letter-spacing:-.3px;font-weight:600;margin-bottom:8px}
   border:1px solid rgba(47,166,188,.28);padding:4px 10px;border-radius:99px}
 h2{font-size:13px;color:#7f97a1;font-weight:500;letter-spacing:1px;margin:26px 0 10px}
 .card{background:#102a34;border:1px solid #1b3d49;border-radius:10px;padding:16px 18px}
-.dl{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #1b3d49}
+.dl{padding:15px 0;border-bottom:1px solid #1b3d49}
+.dlrow{display:flex;align-items:center;gap:14px}
+.dlfix{margin-top:8px;padding-left:46px;font-size:11px;line-height:1.7;color:#7f97a1}
+.dlfix b{color:#c99a4b;font-weight:500}
 .dl:last-child{border-bottom:none;padding-bottom:2px}
 .dl:first-child{padding-top:2px}
 .ic{width:38px;height:38px;border-radius:9px;background:#16394a;display:flex;align-items:center;
@@ -43,10 +46,13 @@ a.btn.ghost:hover{background:#16394a}
 .foot{text-align:center;margin-top:30px;font-size:11.5px;color:#5d7480;line-height:1.9}
 @media(max-width:560px){
   .grid{grid-template-columns:1fr}
-  .dl{flex-wrap:wrap}
+  .dlrow{flex-wrap:wrap}
+  .dlfix{padding-left:0}
   a.btn{width:100%;text-align:center}
   h1{font-size:22px}
 }
+.hero-note{margin-top:16px;padding-top:13px;border-top:1px solid #1b3d49;font-size:11.5px;line-height:1.75;color:#7f97a1}
+.hero-note b{color:#c99a4b;font-weight:500}
 .h2sub{margin:-6px 0 14px;font-size:13px;line-height:1.75;color:var(--muted);max-width:640px;}
 
   .ld-page-disc{
@@ -69,29 +75,43 @@ a.btn.ghost:hover{background:#16394a}
       <span class="badge">不用联网</span>
       <span class="badge">11 种语言</span>
     </div>
+    <div class="hero-note">
+      适合外贸业务员<b>报价前预核算</b>使用。所有结果均为理论估算值，最终以仓库实装、货代与船公司确认为准。
+    </div>
   </div>
 
   <h2>下载</h2>
   <div class="card">
     <div class="dl">
-      <div class="ic">⊞</div>
-      <div class="dt"><b>Windows 版</b><span>免安装，解压后进文件夹双击 exe</span></div>
-      <a class="btn" href="tradedocs-windows.zip" download="外贸单证与装柜系统-Windows.zip">下载</a>
+      <div class="dlrow">
+        <div class="ic">⊞</div>
+        <div class="dt"><b>Windows 版</b><span>免安装，解压后进文件夹双击 exe</span></div>
+        <a class="btn" href="tradedocs-windows.zip" download="外贸单证与装柜系统-Windows.zip">下载</a>
+      </div>
+      <div class="dlfix"><b>打不开？</b>杀毒软件拦截时点「更多信息」→「仍要运行」（360/火绒选「添加信任」）；提示找不到 app.html 是把 exe 单独拖出来了，回去把整个文件夹解压。</div>
     </div>
     <div class="dl">
-      <div class="ic">⌘</div>
-      <div class="dt"><b>Mac 版</b><span>解压后把 app 拖进应用程序</span></div>
-      <a class="btn" href="tradedocs-mac.zip" download="外贸单证与装柜系统-Mac.zip">下载</a>
+      <div class="dlrow">
+        <div class="ic">⌘</div>
+        <div class="dt"><b>Mac 版</b><span>解压后把 app 拖进应用程序</span></div>
+        <a class="btn" href="tradedocs-mac.zip" download="外贸单证与装柜系统-Mac.zip">下载</a>
+      </div>
+      <div class="dlfix"><b>打不开？</b>提示「无法验证开发者」→ 系统设置 → 隐私与安全性 → 点「仍要打开」；仍不行就右键点图标选「打开」。未签名是因为没买苹果开发者证书（一年 688 元），不是病毒。</div>
     </div>
     <div class="dl">
-      <div class="ic">▤</div>
-      <div class="dt"><b>安卓版</b><span>下载后允许安装未知来源应用</span></div>
-      <a class="btn" href="tradedocs.apk" download="外贸单证与装柜系统-安卓.apk">下载</a>
+      <div class="dlrow">
+        <div class="ic">▤</div>
+        <div class="dt"><b>安卓版</b><span>下载后允许安装未知来源应用</span></div>
+        <a class="btn" href="tradedocs.apk" download="外贸单证与装柜系统-安卓.apk">下载</a>
+      </div>
+      <div class="dlfix"><b>装不上？</b>安装时点「设置」→ 允许此来源安装应用（不同品牌叫法不同，一般是「未知来源」或「外部来源应用」）。装完在桌面找「外贸单证与装柜系统」。</div>
     </div>
     <div class="dl">
-      <div class="ic">◎</div>
-      <div class="dt"><b>网页版</b><span>任何浏览器直接打开，不用安装</span></div>
-      <a class="btn ghost" href="app.html" target="_blank">打开</a>
+      <div class="dlrow">
+        <div class="ic">◎</div>
+        <div class="dt"><b>网页版</b><span>任何浏览器直接打开，不用安装</span></div>
+        <a class="btn ghost" href="app.html" target="_blank">打开</a>
+      </div>
     </div>
   </div>
 
